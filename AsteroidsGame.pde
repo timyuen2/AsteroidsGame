@@ -1,10 +1,33 @@
-//your variable declarations here
+Spaceship bob;
+Stars [] stars = new Stars[300];
 public void setup() 
 {
-  //your code here
+	size(800,800);
+	bob = new Spaceship(); 
+	for(int i = 0; i< stars.length; i++)
+		stars[i] = new Stars();
 }
 public void draw() 
 {
-  //your code here
+ background(0);
+ for(int i = 0; i < stars.length;i++)
+ 	stars[i].show();
+ bob.show();
+ bob.move();
 }
-
+public void keyPressed()
+{
+	if(key == 'a')
+		bob.turn(-12);
+	if (key == 'd')
+		bob.turn(12);
+	if(key == 'w')
+		bob.accelerate(.4);
+}
+public void keyReleased()
+{
+	if(key == 'w')
+		bob.accelerate(0);
+		bob.setDirectionX(0);
+		bob.setDirectionY(0);
+}
