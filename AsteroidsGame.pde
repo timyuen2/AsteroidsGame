@@ -23,6 +23,12 @@ public void keyPressed()
 		bob.turn(12);
 	if(key == 'w')
 		bob.accelerate(.4);
+	if(key == 'f')
+	{
+		bob.setX((int)(Math.random()*800));
+		bob.setY((int)(Math.random()*800));
+	}
+		
 }
 public void keyReleased()
 {
