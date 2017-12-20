@@ -3,7 +3,6 @@ class Asteroid extends Floater
   private int rSpeed;
   public Asteroid()
   {
-    
     corners = 8;
  
     int [] xS = {16,8,-8,-16,-16,-8,8,16};
@@ -17,9 +16,7 @@ class Asteroid extends Floater
     myDirectionY = (int)(Math.random()*5-2);
     myPointDirection = 0;
     rSpeed = (int)(Math.random()*5-2);
-
   }
-
   public void move()
   {
     myCenterX += myDirectionX;    
@@ -33,13 +30,10 @@ class Asteroid extends Floater
     {
       myDirectionX = (int)(Math.random()*5-2);
     }
-
     if(myDirectionY == 0)
     {
       myDirectionY = (int)(Math.random()*5-2);
-    }
-
-    //wrap around screen    
+    }    
     if(myCenterX >width)
     {     
       myCenterX = 0;    

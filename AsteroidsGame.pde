@@ -1,10 +1,14 @@
 Spaceship bob;
+boolean bShow = false;
+boolean lShow = false;
 Stars [] stars = new Stars[300];
 ArrayList <Asteroid> asteroids;
+
 public void setup() 
 {
 	size(800,800);
 	bob = new Spaceship(); 
+	
 	for(int i = 0; i< stars.length; i++)
 		stars[i] = new Stars();
 	asteroids = new ArrayList <Asteroid>();
@@ -24,8 +28,9 @@ public void draw()
   {
     asteroids.get(i).show();
     asteroids.get(i).move();
-}
+	}
 
+  
 }
 public void keyPressed()
 {
