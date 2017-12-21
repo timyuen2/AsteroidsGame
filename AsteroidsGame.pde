@@ -48,7 +48,11 @@ public void draw()
       }
       }
     }
-  
+ for(int i=0; i<bullets.size();i++)
+    {
+      bullets.get(i).show();
+      bullets.get(i).move();
+    } 
 }
 public void keyPressed()
 {
@@ -73,11 +77,7 @@ public void keyPressed()
  	}	
  	  if(bShow == true)
   {
-    for(int i=0; i<bullets.size();i++)
-    {
-      bullets.get(i).show();
-      bullets.get(i).move();
-    }
+    
   }
 
 }
